@@ -380,7 +380,7 @@ public class ScreenAV extends BaseScreen{
 		if(mIsVideoCall){
 			itemSendStopVideo = menu.add(1, ScreenAV.MENU_SEND_STOP_VIDEO, 0, getString(R.string.string_send_video));
 		}
-		MenuItem itemShareContent = menu.add(1, ScreenAV.MENU_SHARE_CONTENT, 0, "Share Content").setIcon(R.drawable.image_gallery_48);
+	//	MenuItem itemShareContent = menu.add(1, ScreenAV.MENU_SHARE_CONTENT, 0, "Share Content").setIcon(R.drawable.image_gallery_48);
 		MenuItem itemSpeaker = menu.add(1, ScreenAV.MENU_SPEAKER, 0, mAVSession.isSpeakerOn() ? getString(R.string.string_speaker_off) : getString(R.string.string_speaker_on))
 			.setIcon(R.drawable.phone_speaker_48);
 		
@@ -394,7 +394,7 @@ public class ScreenAV extends BaseScreen{
 				if(itemSendStopVideo != null){
 					itemSendStopVideo.setEnabled(false);
 				}
-				itemShareContent.setEnabled(false);
+			//	itemShareContent.setEnabled(false);
 				break;
 			}
 			
@@ -407,7 +407,7 @@ public class ScreenAV extends BaseScreen{
 				if(itemSendStopVideo != null){
 					itemSendStopVideo.setEnabled(false);
 				}
-				itemShareContent.setEnabled(false);
+			//	itemShareContent.setEnabled(false);
 				break;
 			}
 			
@@ -428,7 +428,7 @@ public class ScreenAV extends BaseScreen{
 				else{
 					itemPickUp.setEnabled(false);
 				}
-				itemShareContent.setEnabled(true);
+			//	itemShareContent.setEnabled(true);
 				break;
 			}
 				
@@ -442,7 +442,7 @@ public class ScreenAV extends BaseScreen{
 				if(itemSendStopVideo != null){
 					itemSendStopVideo.setEnabled(false);
 				}
-				itemShareContent.setEnabled(false);
+			//	itemShareContent.setEnabled(false);
 				break;
 			}
 			default:
