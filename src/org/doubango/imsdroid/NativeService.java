@@ -194,7 +194,7 @@ public class NativeService extends NgnNativeService {
 									if(mWakeLock != null && !mWakeLock.isHeld()){
 										mWakeLock.acquire(10);
 									}
-									mEngine.getSoundService().startRingTone();
+									//mEngine.getSoundService().startRingTone();
 								}
 								else{
 									Log.e(TAG, String.format("Failed to find session with id=%ld", args.getSessionId()));

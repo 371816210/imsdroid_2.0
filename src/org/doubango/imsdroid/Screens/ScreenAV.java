@@ -879,6 +879,8 @@ public class ScreenAV extends BaseScreen{
 	private void loadView(){
 		switch(mAVSession.getState()){
 	        case INCOMING:
+	        	acceptCall();
+				break;
 	        case INPROGRESS:
 	        case REMOTE_RINGING:
 	        	loadTryingView();

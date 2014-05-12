@@ -194,9 +194,9 @@ public class ScreenTabHistory extends BaseScreen {
 				if(!NgnStringUtils.isNullOrEmpty(mSelectedEvent.getRemoteParty())){
 					mLasQuickAction.addActionItem(mAItemVoiceCall);
 					mLasQuickAction.addActionItem(mAItemVideoCall);
-					mLasQuickAction.addActionItem(mAItemChat);
+				/*	mLasQuickAction.addActionItem(mAItemChat);
 					mLasQuickAction.addActionItem(mAItemSMS);
-					mLasQuickAction.addActionItem(mAItemShare);
+					mLasQuickAction.addActionItem(mAItemShare);*/
 				}
 				mLasQuickAction.setAnimStyle(QuickAction.ANIM_AUTO);
 				mLasQuickAction.show();
