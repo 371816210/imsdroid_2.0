@@ -214,9 +214,11 @@ public class ScreenHome extends BaseScreen {
     		new ScreenHomeItem(R.drawable.options_48, "Options", ScreenSettings.class),
     		//new ScreenHomeItem(R.drawable.about_48, "About", ScreenAbout.class),
     		// visible only if connected
-    		new ScreenHomeItem(R.drawable.dialer_48, "Dialer", ScreenTabDialer.class),
+    		//new ScreenHomeItem(R.drawable.dialer_48, "Dialer", ScreenTabDialer.class),
     		//new ScreenHomeItem(R.drawable.eab2_48, "Address Book", ScreenTabContacts.class),
-    		new ScreenHomeItem(R.drawable.history_48, "History", ScreenTabHistory.class),
+    		//new ScreenHomeItem(R.drawable.history_48, "History", ScreenTabHistory.class),
+    		new ScreenHomeItem(R.drawable.visio_call_48, "Video", ScreenVideoCall.class),
+    		new ScreenHomeItem(R.drawable.voice_call_48, "Audio", ScreenAudioCall.class),
     		//new ScreenHomeItem(R.drawable.chat_48, "Messages", ScreenTabMessages.class),
 		};
 		

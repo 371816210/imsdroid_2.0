@@ -75,6 +75,9 @@ public abstract class BaseScreen extends Activity implements IBaseScreen {
 		SETTINGS_T,
 		SECURITY_T,
 		SPLASH_T,
+		DEVICES_T,
+		SCREENVIDEOCALL_T,
+		SCREENAUDIOCALL_T,
 		
 		TAB_CONTACTS, 
 		TAB_HISTORY_T, 
