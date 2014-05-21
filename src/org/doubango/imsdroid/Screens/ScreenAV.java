@@ -1067,7 +1067,7 @@ public class ScreenAV extends BaseScreen{
 		final ImageView ivAvatar = (ImageView)mViewTermwait.findViewById(R.id.view_call_trying_imageView_avatar);
 		mViewTermwait.findViewById(R.id.view_call_trying_imageButton_pick).setVisibility(View.GONE);
 		mViewTermwait.findViewById(R.id.view_call_trying_imageButton_hang).setVisibility(View.GONE);
-		mViewTermwait.setBackgroundResource(R.drawable.grad_bkg_termwait);
+		//mViewTermwait.setBackgroundResource(R.drawable.grad_bkg_termwait);
 		
 		tvRemote.setText(mRemotePartyDisplayName);
 		if(mRemotePartyPhoto != null){
