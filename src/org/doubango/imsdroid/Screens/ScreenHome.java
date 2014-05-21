@@ -24,8 +24,11 @@ import org.doubango.imsdroid.Main;
 import org.doubango.imsdroid.R;
 import org.doubango.ngn.events.NgnEventArgs;
 import org.doubango.ngn.events.NgnRegistrationEventArgs;
+import org.doubango.ngn.media.NgnMediaType;
+import org.doubango.ngn.services.INgnConfigurationService;
 import org.doubango.ngn.services.INgnSipService;
 import org.doubango.ngn.sip.NgnSipSession.ConnectionState;
+import org.doubango.ngn.utils.NgnConfigurationEntry;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -58,6 +61,7 @@ public class ScreenHome extends BaseScreen {
 	private GridView mGridView;
 	
 	private final INgnSipService mSipService;
+	private final INgnConfigurationService mConfigurationService;
 	
 	private BroadcastReceiver mSipBroadCastRecv;
 	
@@ -65,6 +69,7 @@ public class ScreenHome extends BaseScreen {
 		super(SCREEN_TYPE.HOME_T, TAG);
 		
 		mSipService = getEngine().getSipService();
+		mConfigurationService = getEngine().getConfigurationService();
 	}
 	
 	@Override
@@ -88,6 +93,16 @@ public class ScreenHome extends BaseScreen {
 						else{
 							mSipService.register(ScreenHome.this);
 						}
+					}
+					else if (position == 3 ) //Video
+					{
+					    String device_sip_number = mConfigurationService.getString(NgnConfigurationEntry.Devices_SIP_NUMBER,NgnConfigurationEntry.DEFAULT_Devices_SIP_NUMBER);
+					    ScreenAV.makeCall(device_sip_number,  NgnMediaType.AudioVideo);
+					}
+					else if (position == 4)  //Audio
+					{
+						String device_sip_number = mConfigurationService.getString(NgnConfigurationEntry.Devices_SIP_NUMBER,NgnConfigurationEntry.DEFAULT_Devices_SIP_NUMBER);
+					    ScreenAV.makeCall(device_sip_number,  NgnMediaType.Audio);
 					}
 					else if(position == ScreenHomeItem.ITEM_EXIT_POS){
 						final AlertDialog dialog = CustomDialog.create(
@@ -217,8 +232,8 @@ public class ScreenHome extends BaseScreen {
     		//new ScreenHomeItem(R.drawable.dialer_48, "Dialer", ScreenTabDialer.class),
     		//new ScreenHomeItem(R.drawable.eab2_48, "Address Book", ScreenTabContacts.class),
     		//new ScreenHomeItem(R.drawable.history_48, "History", ScreenTabHistory.class),
-    		new ScreenHomeItem(R.drawable.visio_call_48, "Video", ScreenVideoCall.class),
-    		new ScreenHomeItem(R.drawable.voice_call_48, "Audio", ScreenAudioCall.class),
+    		new ScreenHomeItem(R.drawable.visio_call_48, "Video", null),
+    		new ScreenHomeItem(R.drawable.voice_call_48, "Audio", null),
     		//new ScreenHomeItem(R.drawable.chat_48, "Messages", ScreenTabMessages.class),
 		};
 		

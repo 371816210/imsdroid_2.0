@@ -48,8 +48,6 @@
         <activity android:name=".Screens.ScreenAVQueue"></activity>
         <activity android:name=".Screens.ScreenChatQueue"></activity>
         <activity android:name=".Screens.ScreenDevices"></activity>
-        <activity android:name=".Screens.ScreenAudioCall"></activity>
-        <activity android:name=".Screens.ScreenVideoCall"></activity>
 
     </application>
     
