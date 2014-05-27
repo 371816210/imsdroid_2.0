@@ -4,7 +4,21 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="25px" >
 
-   <TextView android:layout_width="wrap_content"  android:layout_height="wrap_content" android:id="@+id/screen_devices_textView_devicesipnumber" android:text="DeviceSipNumber" android:textSize="16dp"></TextView>
-   <EditText android:layout_below="@+id/screen_devices_textView_devicesipnumber" android:layout_marginTop="20px"  android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="" android:id="@+id/screen_devices_editText_devicesipnumber"></EditText>
-   </RelativeLayout>
+    <TextView
+        android:id="@+id/screen_devices_textView_devicesipnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DeviceSipNumber"
+        android:textSize="16dp" >
+    </TextView>
 
+    <EditText
+        android:id="@+id/screen_devices_editText_devicesipnumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/screen_devices_textView_devicesipnumber"
+        android:layout_marginTop="20px"
+        android:text="" >
+    </EditText>
+
+</RelativeLayout>
